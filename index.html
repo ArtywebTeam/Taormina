@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taormina · Ristorante & Pizzeria</title>
+  <meta name="description" content="Sito web elegante per Ristorante Pizzeria Taormina. Specialità di pesce, pizza cotta nel forno a legna dal 2007 a Gardone Val Trompia.">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="brand-link" id="brand-link">
+        <img src="assets/images/logo.jpeg" alt="Taormina Logo" class="brand-logo" id="header-logo">
+        <span class="brand-name">TAORMINA</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" id="main-nav" aria-label="Navigazione Principale">
+        <a href="#identita" data-i18n="nav_identity">Identità</a>
+        <a href="#menu" data-i18n="nav_menu">Menu</a>
+        <a href="#galleria" data-i18n="nav_gallery">Galleria</a>
+        <a href="#visita" data-i18n="nav_visit">Visita</a>
+      </nav>
+
+      <!-- Header Controls -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <button class="control-btn" id="lang-toggle-btn" onclick="toggleLanguage()" aria-label="Cambia lingua" type="button">EN</button>
+        
+        <!-- Theme Toggle (Dark / Light) -->
+        <button class="control-btn" id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Cambia tema" type="button">
+          <span id="theme-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>
+          </span>
+        </button>
+
+        <!-- CTA Book Table -->
+        <a href="reservation.html" class="header-book-btn" id="header-book-btn" data-i18n="nav_book">Prenota</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle-btn" id="mobile-menu-toggle" aria-label="Apri menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#identita" data-i18n="nav_identity">Identità</a>
+    <a href="#menu" data-i18n="nav_menu">Menu</a>
+    <a href="#galleria" data-i18n="nav_gallery">Galleria</a>
+    <a href="#visita" data-i18n="nav_visit">Visita</a>
+    <a href="reservation.html" class="cta-primary" style="margin-top: 1rem;" data-i18n="hero_btn_book">Prenota un tavolo</a>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <!-- Background Ambient Video -->
+      <video class="hero-video" src="assets/video/hero-video.mp4" autoplay muted loop playsinline preload="auto"></video>
+      <div class="hero-overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-i18n="hero_eyebrow">Ristorante · Pizzeria · Dal 2007</p>
+        <h1 class="hero-title" data-i18n="hero_title">L'anima della Sicilia a tavola.</h1>
+        <p class="hero-desc" data-i18n="hero_subtitle">Specialità di mare e pizza cotta nel forno a legna.</p>
+        <div class="hero-buttons">
+          <a href="reservation.html" class="cta-primary" data-i18n="hero_btn_book">Prenota un tavolo</a>
+          <a href="#menu" class="cta-ghost" data-i18n="hero_btn_menu">Sfoglia il menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION IDENTITÀ ==================== -->
+    <section class="section" id="identita">
+      <div class="eyebrow" data-i18n="identity_eyebrow">La nostra identità</div>
+      <div class="identity-grid">
+        <h2 class="heading" data-i18n="identity_heading">Tra il calore del forno e la freschezza del mare.</h2>
+        <p class="body-copy" data-i18n="identity_desc">Taormina nasce nel 2007 da una cucina sincera: sapori mediterranei, specialità di pesce e la convivialità di una vera pizzeria italiana. Un luogo informale ed elegante, pensato per stare bene a tavola.</p>
+      </div>
+
+      <!-- 3 Pillars Grid -->
+      <div class="pillars-grid">
+        <!-- Pillar 1: Mare / Seafood -->
+        <div class="pillar-card">
+          <svg class="pillar-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/>
+            <path d="M18 12v.5"/>
+            <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"/>
+            <path d="M7 10.67C7 8 5.58 5.97 2.73 4 3.37 7.5 3.5 9 3.5 12c0 3-.13 4.5-.77 8 2.85-1.97 4.27-4 4.27-6.67v-2.66Z"/>
+          </svg>
+          <h3 class="font-display" data-i18n="pillar_sea_title">mare</h3>
+          <p data-i18n="pillar_sea_desc">Pesce di mare selezionato, cucinato con rispetto.</p>
+        </div>
+
+        <!-- Pillar 2: Forno / Wood-fired -->
+        <div class="pillar-card">
+          <svg class="pillar-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+          </svg>
+          <h3 class="font-display" data-i18n="pillar_oven_title">forno</h3>
+          <p data-i18n="pillar_oven_desc">Pizza fragrante, cotta nel forno a legna.</p>
+        </div>
+
+        <!-- Pillar 3: Casa / Hospitality -->
+        <div class="pillar-card">
+          <svg class="pillar-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          </svg>
+          <h3 class="font-display" data-i18n="pillar_hospitality_title">casa</h3>
+          <p data-i18n="pillar_hospitality_desc">Accoglienza italiana, dal 2007.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION MENU (FLIP-BOOK) ==================== -->
+    <section id="menu" class="section bg-sea text-white">
+      <div class="eyebrow border-white/30" data-i18n="menu_eyebrow">Il libro dei sapori</div>
+      <div class="mb-10 flex flex-wrap items-end justify-between gap-5">
+        <h2 class="heading max-w-3xl" data-i18n="menu_heading">Il nostro menu, da sfogliare.</h2>
+        <p class="max-w-sm opacity-75" data-i18n="menu_desc">Usa le frecce o scorri per voltare pagina.</p>
+      </div>
+
+      <!-- Flip-Book Viewer -->
+      <div class="book mx-auto max-w-4xl">
+        <div class="book-page" id="book-page">
+          <img src="assets/images/menu/page-1.jpg" alt="Menu Taormina, pagina 1" class="h-full w-full object-contain" id="menu-page-img">
+        </div>
+      </div>
+
+      <!-- Flip-Book Controls -->
+      <div class="mt-8 flex items-center justify-center gap-5">
+        <button class="round-button" id="menu-prev-btn" onclick="changeMenuPage(-1)" aria-label="Pagina precedente" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </button>
+        
+        <span class="font-mono text-sm" id="menu-counter">01 / 06</span>
+        
+        <button class="round-button" id="menu-next-btn" onclick="changeMenuPage(1)" aria-label="Pagina successiva" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION GALLERIA ==================== -->
+    <section class="section" id="galleria">
+      <div class="eyebrow" data-i18n="gallery_eyebrow">Dalla nostra cucina</div>
+      <div class="identity-grid" style="margin-bottom: 2.5rem;">
+        <h2 class="heading" data-i18n="gallery_heading">Sapori da vedere.</h2>
+        <p class="body-copy" data-i18n="gallery_desc">Piatti di mare e pizza: la nostra cucina raccontata senza filtri.</p>
+      </div>
+
+      <!-- Subgroup 1: Pesce / Seafood (8 images) -->
+      <div class="gallery-subgroup">
+        <h3 class="gallery-subgroup-title" data-i18n="gallery_seafood_label">Pesce · Specialità di mare</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-1.jpg" alt="Pesce Specialità 1" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-2.jpg" alt="Pesce Specialità 2" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-3.jpg" alt="Pesce Specialità 3" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-4.jpg" alt="Pesce Specialità 4" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-5.jpg" alt="Pesce Specialità 5" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-6.jpg" alt="Pesce Specialità 6" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-7.jpg" alt="Pesce Specialità 7" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-seafood/seafood-8.jpg" alt="Pesce Specialità 8" class="gallery-img" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- Subgroup 2: Pizza / Wood-fired (9 images) -->
+      <div class="gallery-subgroup" style="margin-top: 4rem;">
+        <h3 class="gallery-subgroup-title" data-i18n="gallery_pizza_label">Pizza · Forno a legna</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-1.jpg" alt="Pizza Forno a legna 1" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-2.jpg" alt="Pizza Forno a legna 2" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-3.jpg" alt="Pizza Forno a legna 3" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-4.jpg" alt="Pizza Forno a legna 4" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-5.jpg" alt="Pizza Forno a legna 5" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-6.jpg" alt="Pizza Forno a legna 6" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-7.jpg" alt="Pizza Forno a legna 7" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-8.jpg" alt="Pizza Forno a legna 8" class="gallery-img" loading="lazy"></div>
+          <div class="gallery-item"><img src="assets/images/gallery-pizza/pizza-9.jpg" alt="Pizza Forno a legna 9" class="gallery-img" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION VISITA & CONTACT ==================== -->
+    <section class="section" id="visita">
+      <div class="eyebrow" data-i18n="visit_eyebrow">Organizza la tua visita</div>
+      
+      <div class="visit-card-grid">
+        <!-- Interactive Map Iframe -->
+        <div>
+          <iframe title="Mappa Ristorante Taormina" class="visit-map-iframe" loading="lazy" src="https://maps.google.com/maps?q=45.6869896,10.1862471&z=15&output=embed"></iframe>
+        </div>
+
+        <!-- Details & Hours -->
+        <div class="visit-details">
+          <h2 class="visit-title" data-i18n="visit_heading">Ci vediamo a tavola.</h2>
+          
+          <div class="info-rows">
+            <!-- Map Address -->
+            <a class="info-row" href="https://google.com/maps/place/Ristorante+Pizzeria+Taormina/@45.6869896,10.1836722,17z/data=!4m6!3m5!1s0x47817c0e0712fc17:0x4da3816d8ef48b09!8m2!3d45.6869896!4d10.1862471!16s%2Fg%2F1tf8rz6_" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="visit_location">Gardone Val Trompia · Apri indicazioni</span>
+            </a>
+
+            <!-- Phone -->
+            <a class="info-row" href="tel:+390308912515">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>030 891 2515</span>
+            </a>
+
+            <!-- Hours / Closed Monday -->
+            <div class="info-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-i18n="visit_closed">Chiuso il lunedì</span>
+            </div>
+          </div>
+
+          <p style="margin-bottom: 2rem; opacity: 0.7;" data-i18n="visit_delivery">Consegne a domicilio nel weekend. Per orari e disponibilità, chiamaci.</p>
+          <a class="cta-primary" href="https://www.google.com/search?q=Ristorante+Pizzeria+Taormina+Avis" target="_blank" rel="noreferrer" data-i18n="visit_reviews">Leggi le recensioni Google</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <h4 class="font-display">TAORMINA</h4>
+        <p data-i18n="footer_subtitle">ristorante · pizzeria · dal 2007</p>
+      </div>
+
+      <!-- Footer Contacts & Socials -->
+      <div class="footer-contact">
+        <h5 data-i18n="footer_contact_title">Contatti</h5>
+        <a href="tel:+390308912515" style="display: block; font-size: 1.125rem;">030 891 2515</a>
+        
+        <div class="footer-socials">
+          <a href="https://instagram.com/taormina_pizzeriaristorante" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com/p/Ristorante-Pizzeria-Taormina-100054453821305" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="footer-actions">
+        <a href="reservation.html" class="cta-primary" data-i18n="footer_book">Prenota un tavolo</a>
+        <a href="admin.html" class="admin-link">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

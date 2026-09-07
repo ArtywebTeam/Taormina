@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Prenotazioni · Taormina</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .admin-header-flex {
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .admin-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .admin-filters input {
+      padding: 0.6rem 1rem;
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      color: var(--color-ink);
+    }
+    .admin-filters input:focus {
+      border-color: var(--color-ember);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/logo.jpeg" alt="Taormina Logo" class="brand-logo">
+        <span class="brand-name">TAORMINA <span style="font-size: 0.875rem; opacity: 0.6; font-family: var(--font-body); font-weight: 500;">· ADMIN</span></span>
+      </a>
+
+      <div class="header-actions">
+        <button class="control-btn" id="lang-toggle-btn" onclick="toggleLanguage()" aria-label="Cambia lingua" type="button">EN</button>
+        <button class="control-btn" id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Cambia tema" type="button">
+          <span id="theme-icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN ADMIN DASHBOARD ==================== -->
+  <main class="container" style="min-height: 100vh; padding-top: 7rem; padding-bottom: 5rem;">
+    
+    <div class="admin-header-flex">
+      <div>
+        <a href="index.html" class="back-link" style="margin-bottom: 0.5rem;" data-i18n="admin_back">← Sito Taormina</a>
+        <h1 class="heading" data-i18n="admin_heading">Prenotazioni</h1>
+        <p style="margin-top: 0.5rem; opacity: 0.6;" id="admin-total-count">0 richieste totali</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="admin-filters">
+        <input type="text" id="admin-search" placeholder="Cerca cliente…" data-i18n-placeholder="admin_search_placeholder">
+        <input type="date" id="admin-date-filter" aria-label="Filtra per data">
+      </div>
+    </div>
+
+    <!-- Reservations Table Card -->
+    <div class="admin-card">
+      <div style="overflow-x: auto;">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th data-i18n="admin_col_client">Cliente</th>
+              <th data-i18n="admin_col_contact">Contatto</th>
+              <th data-i18n="admin_col_date">Data</th>
+              <th data-i18n="admin_col_guests">Ospiti</th>
+              <th data-i18n="admin_col_status">Stato</th>
+              <th data-i18n="admin_col_actions">Azioni</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body">
+            <!-- Dynamic Rows rendered via admin.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty state -->
+      <p id="admin-no-results" style="display: none; padding: 4rem 1rem; text-align: center; opacity: 0.6;" data-i18n="admin_no_results">Nessuna prenotazione trovata.</p>
+    </div>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
